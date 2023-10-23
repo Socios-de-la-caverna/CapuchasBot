@@ -1,5 +1,4 @@
 import { Client, GatewayIntentBits } from "discord.js";
-import bienvenida from "./eventos/bienvenida";
 import SimpleCord from "./lib/SimpleCord";
 import panelTickets from "./comandos/panelTickets";
 import expulsar from "./comandos/expulsar";
@@ -10,8 +9,6 @@ import reabrirTicket from "./eventos/reabrirTicket";
 import eliminarTicket from "./eventos/eliminarTicket";
 import transcribirTicket from "./eventos/transcribirTicket";
 import autoRol from "./eventos/autoRol";
-import borrarMensajeMalicioso from "./eventos/moderacion/borrarMensajeMalicioso";
-import ip from "./comandos/ip";
 
 require("dotenv").config();
 const { TOKEN: token } = process.env;
@@ -44,13 +41,12 @@ client.on("ready", () => {
 });
 
 const simpleCord = new SimpleCord()
-  .setColor("#04b504")
+  .setColor("#2fd8de")
   .setImagen(
-    "https://cdn.discordapp.com/attachments/1163349514619461714/1163596619254599680/Proyecto_nuevo.png"
+    "https://cdn.discordapp.com/attachments/1121098388583227554/1121843021894393926/image.psds.png"
   );
 
 client.on("guildMemberAdd", (member) => {
-  bienvenida(member, simpleCord);
   autoRol(member);
 });
 
@@ -69,9 +65,4 @@ client.on("interactionCreate", (interaction) => {
     transcribirTicket(interaction, simpleCord);
   }
   cerrarTicket(interaction, simpleCord);
-});
-
-client.on("messageCreate", (message) => {
-  borrarMensajeMalicioso(message, simpleCord);
-  ip(message, simpleCord);
 });

@@ -21,30 +21,19 @@ export default async function panelTickets(
     .setThumbnail((await interaction.guild?.iconURL()) as string)
     .setDescription(
       `
-    Bienvenido a Soporte de Survicraft
-    
-    **🛑 NOTA**
-
-    Buenas tardes, días o noches. Aquí podrás pedir ayuda de todo tipo.
-
-    **🌞 IMPORTANTE**
-
-    Recuerda ser totalmente honesto si el staff te pregunta algo, nosotros comprobaremos tu respuesta, y si la consideramos fraudulenta eliminaremos tu ticket.
+      Bienvenido al panel de tickets, aquí podrás crear un ticket para que el staff te ayude con tu problema o solicitud.
     `
-    )
-    .setFooter({
-      text: "Recuerda que intentaremos ayudarte en todo momento",
-    });
+    );
 
   const seleccionPanelTickets = simpleCord.crearListaDeSeleccion({
     idPersonalizado: "panel-tickets",
     espacioReservado: "Selecciona un departamento",
     opciones: [
       {
-        etiqueta: "Bug",
-        descripcion: "Reporta un bug",
-        valor: "bug",
-        emoji: "🐛",
+        etiqueta: "Contratanos",
+        descripcion: "Solicita nuestros servicios",
+        valor: "contratanos",
+        emoji: "📝",
       },
       {
         etiqueta: "Reporte",
@@ -53,34 +42,16 @@ export default async function panelTickets(
         emoji: "👮",
       },
       {
-        etiqueta: "Sugerencias",
-        descripcion: "Danos tus sugerencias",
-        valor: "sugerencias",
-        emoji: "📝",
-      },
-      {
-        etiqueta: "Requi Media",
-        descripcion: "Asóciate a nosotros mediante videos o streams",
-        valor: "requi-media",
-        emoji: "🎥",
-      },
-      {
-        etiqueta: "Padres de familia",
-        descripcion: "Pregunta por la actividad de tus hijos",
-        valor: "padres-familia",
-        emoji: "👪",
-      },
-      {
-        etiqueta: "Compras en tienda",
-        descripcion: "Compra algo en nuestra tienda",
-        valor: "compras-tienda",
-        emoji: "🛒",
-      },
-      {
         etiqueta: "Staff",
         descripcion: "Solicita ser staff del servidor",
         valor: "staff",
         emoji: "👨‍🔧",
+      },
+      {
+        etiqueta: "Aplicar para socio",
+        descripcion: "Solicita ser socio parte de este estudio",
+        valor: "socio",
+        emoji: "👨‍💼",
       },
     ],
   });

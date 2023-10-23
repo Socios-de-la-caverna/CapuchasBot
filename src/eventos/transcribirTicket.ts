@@ -23,11 +23,12 @@ export default async function transcribirTicket(
     });
   }
 
-  const canalTicket = await interaction.guild?.channels.fetch(
+  /*   const canalTicket = await interaction.guild?.channels.fetch(
     interaction.channel?.id as string
   );
+
   const transcripcion = await discordTranscripts.createTranscript(
-    canalTicket as TextBasedChannel
+    canalTicket as TextBasedChannel,
   );
 
   const canalRegistrosTickets = (await interaction.guild?.channels.fetch(
@@ -38,13 +39,10 @@ export default async function transcribirTicket(
     content: `Transcripción del ticket **[${canalTicket?.name}]**`,
     files: [transcripcion],
   });
-
+ */
   const embed = simpleCord
     .crearEmbed()
-    .setTitle("📄 Ticket transcrito")
-    .setDescription(
-      "Se ha enviado la transcripción del ticket al canal de registros"
-    );
+    .setTitle("Esta función aun no esta disponible");
 
   interaction.reply({
     embeds: [embed],
