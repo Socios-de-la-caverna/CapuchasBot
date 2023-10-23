@@ -26,17 +26,12 @@ client.login(token);
 
 client.on("ready", () => {
   console.log(`
- \u001b[32m╭────────────── Bot Survicraft ──────────────╮\u001b[36m╭───────── ¿Quieres un bot propio? ────────╮
- \u001b[32m│ Estado » desarrollo  Contrato » 14/10/2023 │\u001b[36m│    Si deseas tu propio bot de Discord,   │
- \u001b[32m│ Versión » 0.4        Entrega » null        │\u001b[36m│   página web, servidor Minecraft, logo,  │
- \u001b[32m╰────────────────────────────────────────────╯\u001b[36m│ etc. Contacta a los Socios de la caverna │
- \u001b[35m╭─────────── Creado por Anfitrion ───────────╮\u001b[36m│       https://discord.gg/nFHBs3vXc7      │
- \u001b[35m│                                            │\u001b[36m╰──────────────────────────────────────────╯
- \u001b[35m│  » https://github.com/aAnfitrion          │\u001b[33m╭────────── Creado para itzgabo_ ──────────╮
- \u001b[35m│ 󰑍 » https://www.reddit.com/user/Anfitrion_ │\u001b[33m│ Calidad de cliente »                │
- \u001b[35m│ 󰗃 » https://www.youtube.com/@anfitrion222  │\u001b[33m│ Contacto » https://discord.gg/ZvqUg2FYZA │
- \u001b[35m╰────────────────────────────────────────────╯\u001b[33m╰──────────────────────────────────────────╯
- \u001b[0m
+  \u001b[35m╭─────────── Creado por Anfitrion ───────────╮
+  \u001b[35m│                                            │
+  \u001b[35m│  » https://github.com/aAnfitrion          │
+  \u001b[35m│ 󰑍 » https://www.reddit.com/user/Anfitrion_ │
+  \u001b[35m│ 󰗃 » https://www.youtube.com/@anfitrion222  │
+  \u001b[35m╰────────────────────────────────────────────╯
   `);
 });
 
