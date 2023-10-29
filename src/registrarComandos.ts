@@ -56,6 +56,24 @@ const comandos = [
     name: "cerrar-ticket",
     description: "Cierra el ticket",
   },
+  {
+    name: "resena",
+    description: "Crea una reseña",
+    options: [
+      {
+        name: "estrellas",
+        description: "Cantidad de estrellas",
+        required: true,
+        type: ApplicationCommandOptionType.Integer,
+      },
+      {
+        name: "comentario",
+        description: "Comentario de la reseña",
+        required: true,
+        type: ApplicationCommandOptionType.String,
+      },
+    ],
+  },
 ];
 
 (async () => {

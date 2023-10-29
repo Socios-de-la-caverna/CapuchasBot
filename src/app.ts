@@ -9,6 +9,7 @@ import reabrirTicket from "./eventos/reabrirTicket";
 import eliminarTicket from "./eventos/eliminarTicket";
 import transcribirTicket from "./eventos/transcribirTicket";
 import autoRol from "./eventos/autoRol";
+import resenas from "./eventos/resenas";
 
 require("dotenv").config();
 const { TOKEN: token } = process.env;
@@ -50,6 +51,7 @@ client.on("interactionCreate", (interaction) => {
     panelTickets(interaction, simpleCord);
     expulsar(interaction, simpleCord);
     banear(interaction, simpleCord);
+    resenas(interaction, simpleCord);
   }
   if (interaction.isStringSelectMenu()) {
     crearTicket(interaction, simpleCord);
